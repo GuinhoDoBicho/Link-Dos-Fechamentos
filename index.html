@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Guinho do Bicho - Ordem dos Fechamentos</title>
+    <title>Guinho do Bicho - Central de Fechamentos</title>
     <style>
-        /* Documentação: Reset e Bloqueio de Seleção */
+        /* Documentação: Configurações Globais e Proteção de Seleção */
         * {
             margin: 0;
             padding: 0;
@@ -27,21 +27,21 @@
             position: relative;
         }
 
-        /* --- CAMADA DE MOVIMENTO NO PLANO DE FUNDO --- */
+        /* --- TEMA ASSASSIN'S CREED: PLANO DE FUNDO --- */
         .background-animado {
             position: fixed;
             top: 0;
             left: 0;
             width: 100%;
             height: 100%;
-            /* Imagem de pergaminho/AC de fundo */
+            /* Camada de pergaminho e gradiente escuro */
             background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.8)), 
                         url('https://www.transparenttextures.com/patterns/papyros.png'),
                         linear-gradient(135deg, #2b0000 0%, #000 100%);
             z-index: -2;
         }
 
-        /* Efeito de Brasas/Partículas flutuantes */
+        /* Efeito de Brasas Flutuantes (Movimento) */
         .particulas {
             position: fixed;
             top: 0;
@@ -61,7 +61,7 @@
             to { transform: translateY(-1000px); }
         }
 
-        /* --- ESTILO DO CONTEÚDO --- */
+        /* --- ESTILO DO PERFIL --- */
         .perfil {
             text-align: center;
             margin-bottom: 40px;
@@ -72,14 +72,9 @@
             width: 140px;
             height: 140px;
             border-radius: 50%;
-            border: 4px solid #ffcc00; /* Amarelo Dourado */
+            border: 4px solid #ffcc00; /* Borda Amarela Dourada */
             box-shadow: 0 0 30px rgba(255, 204, 0, 0.3);
             object-fit: cover;
-            transition: transform 0.5s ease;
-        }
-
-        .perfil img:hover {
-            transform: rotate(360s); /* Pequena referência ao sincronismo */
         }
 
         .perfil h1 {
@@ -91,21 +86,23 @@
             text-shadow: 3px 3px 5px #000;
         }
 
+        /* --- CONTAINER E BOTÕES --- */
         .container-links {
             width: 100%;
             max-width: 450px;
             display: flex;
             flex-direction: column;
-            gap: 15px;
+            gap: 12px;
             z-index: 1;
         }
 
         .botao-link {
+            /* Degradê Vermelho */
             background: linear-gradient(90deg, #8b0000 0%, #cc0000 50%, #8b0000 100%);
             color: #ffcc00; /* Texto Amarelo */
             text-decoration: none;
             text-align: center;
-            padding: 18px;
+            padding: 16px;
             border-radius: 2px;
             font-weight: bold;
             font-size: 14px;
@@ -120,21 +117,8 @@
         }
 
         /* Efeito de brilho ao passar o mouse */
-        .botao-link::after {
-            content: '';
-            position: absolute;
-            top: 0; left: -100%;
-            width: 100%; height: 100%;
-            background: linear-gradient(90deg, transparent, rgba(255, 204, 0, 0.4), transparent);
-            transition: 0.5s;
-        }
-
-        .botao-link:hover::after {
-            left: 100%;
-        }
-
         .botao-link:hover {
-            transform: scale(1.05);
+            transform: scale(1.03);
             background: #ffcc00;
             color: #8b0000;
             border-left: 5px solid #8b0000;
@@ -142,8 +126,7 @@
         }
 
         .footer-logo {
-            margin-top: auto;
-            padding-top: 40px;
+            margin-top: 30px;
             color: #ffcc00;
             font-size: 10px;
             letter-spacing: 5px;
@@ -154,16 +137,19 @@
 </head>
 <body oncontextmenu="return false;">
 
-    <!-- Fundo Temático com Movimento -->
+    <!-- Camadas de Fundo Animado -->
     <div class="background-animado"></div>
     <div class="particulas"></div>
 
     <div class="perfil">
+        <!-- Foto de perfil original do projeto -->
         <img src="https://i.ibb.co/JWGwXQZj/Gemini-Generated-Image-nd6belnd6belnd6b-1.png" alt="Guinho do Bicho">
         <h1>Guinho do Bicho</h1>
     </div>
 
+    <!-- Lista de Links Completa -->
     <div class="container-links">
+        <a href="https://guinhodobicho.github.io/Fechamentos-Do-Guinho" class="botao-link">Fechamentos Do Guinho</a>
         <a href="https://guinhodobicho.github.io/Milha-Acertiva" class="botao-link">Milha Assertiva</a>
         <a href="https://guinhodobicho.github.io/Calculadora-De-Probabilidade" class="botao-link">Calculadora de Probabilidades</a>
         <a href="https://guinhodobicho.github.io/Super-Centenas-Combinadas" class="botao-link">Super Centenas Invertidas</a>
@@ -175,11 +161,14 @@
 
     <div class="footer-logo">NADA É VERDADE, TUDO É PERMITIDO</div>
 
-    <!-- Script de Segurança (Bloqueio de Código) -->
+    <!-- Script de Segurança (Bloqueio de Código-Fonte) -->
     <script>
         document.onkeydown = function(e) {
+            // Bloqueia F12
             if(e.keyCode == 123) { return false; }
+            // Bloqueia Ctrl+Shift+I e Ctrl+Shift+J
             if(e.ctrlKey && e.shiftKey && (e.keyCode == 'I'.charCodeAt(0) || e.keyCode == 'J'.charCodeAt(0))) { return false; }
+            // Bloqueia Ctrl+U
             if(e.ctrlKey && e.keyCode == 'U'.charCodeAt(0)) { return false; }
         };
     </script>
