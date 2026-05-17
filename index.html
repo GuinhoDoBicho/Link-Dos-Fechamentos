@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Guinho do Bicho - Central de Fechamentos</title>
     <style>
-        /* Documentação: Reset e Proteção de Seleção */
+        /* Documentação: Reset e Proteção de Seleção Geral */
         * {
             margin: 0;
             padding: 0;
@@ -40,7 +40,7 @@
             z-index: -2;
         }
 
-        /* Efeito de Brasas Flutuantes (Movimento) */
+        /* Efeito de Brasas Flutuantes (Movimento de Partículas) */
         .particulas {
             position: fixed;
             top: 0;
@@ -132,27 +132,27 @@
 </head>
 <body oncontextmenu="return false;">
 
+    <!-- Elementos de Background -->
     <div class="background-animado"></div>
     <div class="particulas"></div>
 
+    <!-- Cabeçalho do Perfil -->
     <div class="perfil">
         <img src="https://i.ibb.co/JWGwXQZj/Gemini-Generated-Image-nd6belnd6belnd6b-1.png" alt="Guinho do Bicho">
         <h1>Guinho do Bicho</h1>
     </div>
 
-    <!-- Lista de Links Atualizada -->
+    <!-- Lista de Links Corrigida -->
     <div class="container-links">
-    div class="container-links">
-href="https://guinhodobicho.github.io/Milhar-Milionaria-Do-Guinho
-" class="botao-link">MILHAR MILIONARIA</a>
+        <a href="https://guinhodobicho.github.io/Milhar-Milionaria-Do-Guinho" class="botao-link">MILHAR MILIONARIA</a>
         <a href="https://guinhodobicho.github.io/R2-Especial" class="botao-link">R2 ESPECIAL DO GUINHO</a>
         <a href="https://guinhodobicho.github.io/Milhar-Gemeas-Matadoras" class="botao-link">MILHAR GÊMEAS MATADORAS</a>
         <a href="https://guinhodobicho.github.io/Centenas-Infaliveis" class="botao-link">CENTENAS INFALÍVEIS</a>
-        <a href="https://guinhodobicho.github.io/Milha-Pares-E-Impares" class="botao-link">MILHA PARES E IMPARES</a>
-        <a href="https://guinhodobicho.github.io/Robo-Palpiteiro" class="botao-link">ROBO PALPITEIRO DO GUINHO</a>
+        <a href="https://guinhodobicho.github.io/Milha-Pares-E-Impares" class="botao-link">MILHA PARES E ÍMPARES</a>
+        <a href="https://guinhodobicho.github.io/Robo-Palpiteiro" class="botao-link">ROBÔ PALPITEIRO DO GUINHO</a>
         <a href="https://guinhodobicho.github.io/13-Da-Sorte-Lotinha" class="botao-link">13 DA SORTE LOTINHA</a>
         <a href="https://guinhodobicho.github.io/R1-Especial-Do-Guinho" class="botao-link">R1 ESPECIAL</a>
-        <a  href="https://guinhodobicho.github.io/Milha-Acertiva" class="botao-link">Milha Assertiva</a>
+        <a href="https://guinhodobicho.github.io/Milha-Acertiva" class="botao-link">Milha Assertiva</a>
         <a href="https://guinhodobicho.github.io/Calculadora-De-Probabilidade" class="botao-link">Calculadora de Probabilidades</a>
         <a href="https://guinhodobicho.github.io/Super-Centenas-Combinadas" class="botao-link">Super Centenas Invertidas</a>
         <a href="https://guinhodobicho.github.io/Gerenciador-De-Gastos" class="botao-link">Gerenciador de Finanças</a>
@@ -161,16 +161,17 @@ href="https://guinhodobicho.github.io/Milhar-Milionaria-Do-Guinho
         <a href="https://guinhodobicho.github.io/Rob-Analisador-Alternativas" class="botao-link">Robô Analisador das Alternativas</a>
     </div>
 
+    <!-- Rodapé -->
     <div class="footer-logo">NADA É VERDADE, TUDO É PERMITIDO</div>
 
-    <!-- Script de Segurança (Bloqueio de Código-Fonte) -->
+    <!-- Script de Segurança (Bloqueio de Atalhos do Teclado) -->
     <script>
         document.onkeydown = function(e) {
             // Bloqueia F12
             if(e.keyCode == 123) { return false; }
-            // Bloqueia Ctrl+Shift+I e Ctrl+Shift+J
+            // Bloqueia Ctrl+Shift+I e Ctrl+Shift+J (Ferramentas do Desenvolvedor)
             if(e.ctrlKey && e.shiftKey && (e.keyCode == 'I'.charCodeAt(0) || e.keyCode == 'J'.charCodeAt(0))) { return false; }
-            // Bloqueia Ctrl+U
+            // Bloqueia Ctrl+U (Ver Código Fonte)
             if(e.ctrlKey && e.keyCode == 'U'.charCodeAt(0)) { return false; }
         };
     </script>
